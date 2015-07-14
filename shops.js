@@ -1,5 +1,5 @@
 function DonutShop(storeId, minCust, maxCust, avgDonutsPerCust){
-  this.hours = 12;
+  this.hours = 11;
   this.donutHourArray = [];
 
   this.storeId = storeId;
@@ -24,7 +24,7 @@ DonutShop.prototype.render = function(){
   }
 
   var totalDonuts = document.createElement("td");
-   totalDonuts.textContent = this.donutsToday;
+  totalDonuts.textContent = this.donutsToday;
   row.appendChild(totalDonuts);
 
   return row;
