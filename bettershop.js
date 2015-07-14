@@ -11,10 +11,10 @@
 
 var Shop = function (storeLocation, minCustPerHr, maxCustPerHr, avgDonutsPerCust) {
 this.hours = 11;
+this.storeLocation = storeLocation;
 this.minCustPerHr = minCustPerHr;
 this.maxCustPerHr = maxCustPerHr;
 this.avgDonutsPerCust = avgDonutsPerCust;
-this.storeLocation = storeLocation;
 };
 
 //method: calculate customers per hour
@@ -48,9 +48,6 @@ Shop.prototype.calculateDailyDonuts = function(){
     return this.dailyDonuts;
 };
 
-var downtown = new Shop("Downtown", 8, 43, 4.5);
-downtown.calculateDailyDonuts();
-console.log(downtown.calculateDailyDonuts());
 
 //method : do all the following:
     //create new element for table - tr
@@ -58,6 +55,11 @@ console.log(downtown.calculateDailyDonuts());
     //add store location to table (append child td to tr)
     //add donuts per hour to table (append td to tr) - DO THIS 11 TIMES
     // add donuts per day to table (append td to tr)
+
+Shop.prototype.makeArray = function(){
+  this.shopArray = [];
+
+};
 
 Shop.prototype.makeTable = function(){
   this.calculateDailyDonuts();
@@ -70,20 +72,21 @@ Shop.prototype.makeTable = function(){
 
   //insert store location into the new row
   th.textContent = this.storeLocation;
+  th.setAttribute('class', this.storeLocation);
   tr.appendChild(th);
-
-
 
   // loop to insert hourly donuts into table
   for (var i = 0; i < this.hours; i++){
     var td = document.createElement('td');
     td.textContent = this.hourlyDonuts[i];
+    td.setAttribute('class', this.storeLocation);
     tr.appendChild(td);
   }
 
   //insert daily donuts total into table
   var td = document.createElement('td');
   td.textContent = this.dailyDonuts;
+  td.setAttribute('class', this.storeLocation);
   tr.appendChild(td);
 
   //add the new row to the table
@@ -110,3 +113,19 @@ downtown.makeTable();
 southLakeUnion.makeTable();
 wedgewood.makeTable();
 
+// if the store name matches an existing name, delete the old data and repalce
+//it with the new data.
+//otherwise, just add the new data
+var newStore = function(){
+    var newLocation = document.getElementById('newLocation').value;
+    var newMin = document.getElementById('newMin').value;
+    var newMax = document.getElementById('newMax').value;
+    var newAvg = document.getElementById('newAvg').value;
+    var newStore = new Shop(newLocation, newMin, newMax, newAvg);
+    newStore.makeTable();
+};
+
+var newEl = document.getElementById('addStore');
+newEl.addEventListener("click", newStore, false);
+
+var locationArray = [];
