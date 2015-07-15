@@ -126,7 +126,6 @@ var newStore = function(){
       if(newLocation.toUpperCase() === locationArray[i].storeLocation.toUpperCase()){
         var found = true;
         var index = i;
-        console.log(index);
         break;
       }
     }
@@ -136,7 +135,6 @@ var newStore = function(){
       locationArray[locationArray.length - 1].makeTable();
     }
     if (found === true){
-      console.log("ok now i need to delete that row and then make an new revised one!")
       var foundRow = document.getElementById(locationArray[index].storeLocation);
       var foundRowParent = foundRow.parentNode;
       foundRowParent.removeChild(foundRow);
