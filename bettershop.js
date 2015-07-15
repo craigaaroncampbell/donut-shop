@@ -56,10 +56,6 @@ Shop.prototype.calculateDailyDonuts = function(){
     //add donuts per hour to table (append td to tr) - DO THIS 11 TIMES
     // add donuts per day to table (append td to tr)
 
-Shop.prototype.makeArray = function(){
-  this.shopArray = [];
-
-};
 
 Shop.prototype.makeTable = function(){
   this.calculateDailyDonuts();
@@ -94,24 +90,24 @@ Shop.prototype.makeTable = function(){
 };
 
 
+var locationArray = [];
 //create instances of each donut shop
-var downtown = new Shop("Downtown", 8, 43, 4.5);
+locationArray.push(new Shop("Downtown", 8, 43, 4.5));
 
-var capitalHill = new Shop("Capital Hill", 4, 37, 2);
+locationArray.push(new Shop("Capital Hill", 4, 37, 2));
 
-var southLakeUnion = new Shop("South Lake Union", 9, 23, 6.33);
+locationArray.push(new Shop("South Lake Union", 9, 23, 6.33));
 
-var wedgewood = new Shop("Wedgewood", 2, 28, 1,25);
+locationArray.push(new Shop("Wedgewood", 2, 28, 1,25));
 
-var ballard = new Shop("Ballard", 8, 58, 3.75);
-
+locationArray.push(new Shop("Ballard", 8, 58, 3.75));
 
 //call method that adds data to table for each store location
-ballard.makeTable();
-capitalHill.makeTable();
-downtown.makeTable();
-southLakeUnion.makeTable();
-wedgewood.makeTable();
+for (var i = 0; i < locationArray.length; i++){
+  locationArray[i].makeTable();
+}
+
+
 
 // if the store name matches an existing name, delete the old data and repalce
 //it with the new data.
@@ -121,11 +117,49 @@ var newStore = function(){
     var newMin = document.getElementById('newMin').value;
     var newMax = document.getElementById('newMax').value;
     var newAvg = document.getElementById('newAvg').value;
-    var newStore = new Shop(newLocation, newMin, newMax, newAvg);
-    newStore.makeTable();
+
+
+
+    var found = false;
+    for(var i = 0; i < locationArray.length; i++){
+      // console.log("for loop " + i);
+
+      if(newLocation.toUpperCase() === locationArray[i].storeLocation.toUpperCase()){
+        var found = true;
+        break;
+      }
+    }
+    // console.log(found);
+    if (found === false){
+      locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
+      locationArray[locationArray.length - 1].makeTable();
+    }
+    if (found === true){
+      console.log("ok now i need to delete that row and then make an new revised one!")
+      // var elementToRemove = document.getElementByClass(newLocation)
+      // var parentElement = elementToRemove.parentNode;
+      // parentElement.removeChild(elementToRemove);
+      locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
+      locationArray[locationArray.length - 1].makeTable();
+
+    }
+
+    // else { continue;
+      // console.log("found it on iteration " + i);
+      // var found = true;
+      // if (found === true){
+      // // locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
+      // console.log ("found is true");
+      // break;
+    // }
+    // console.log(locationArray);
+    // locationArray[locationArray.length - 1].makeTable();
+    // return;
+
+
+
 };
 
 var newEl = document.getElementById('addStore');
 newEl.addEventListener("click", newStore, false);
 
-var locationArray = [];
