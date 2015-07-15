@@ -61,6 +61,7 @@ Shop.prototype.makeTable = function(){
   this.calculateDailyDonuts();
   //create table row, table header, and td elements to put data in
   var tr = document.createElement('tr');
+  tr.setAttribute("id", this.storeLocation)
   var th = document.createElement('th');
 
   //gets table element  in HTML to attach the new elements to
@@ -144,15 +145,15 @@ var newStore = function(){
     }
     if (found === true){
       console.log("ok now i need to delete that row and then make an new revised one!")
-      console.log(locationArray[index]);
+      // console.log("before: " + locationArray);
+      var foundRow = document.getElementById(locationArray[index].storeLocation);
+      var foundRowParent = foundRow.parentNode;
+      foundRowParent.removeChild(foundRow);
       locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
-      console.log(locationArray[index]);
-      // console.log("before: " + newArray);
-      // newArray[0] = newLocation;
-      // newArray[1] = newMin;
-      // newArray[2] = newMax;
-      // newArray[3] = newAvg;
-      // console.log("after: " + newArray);
+      // console.log(locationArray[index]);
+      // console.log("after: " + locationArray);
+      locationArray[index].makeTable();
+
       }
 
       // var elementToRemove = document.getElementByClass(newLocation)
