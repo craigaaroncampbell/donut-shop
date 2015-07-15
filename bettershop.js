@@ -114,18 +114,26 @@ for (var i = 0; i < locationArray.length; i++){
 //otherwise, just add the new data
 var newStore = function(){
     var newLocation = document.getElementById('newLocation').value;
-    var newMin = document.getElementById('newMin').value;
-    var newMax = document.getElementById('newMax').value;
-    var newAvg = document.getElementById('newAvg').value;
+    var newMinStr = document.getElementById('newMin').value;
+    var newMin = parseInt(newMinStr);
+    var newMaxStr = document.getElementById('newMax').value;
+    var newMax = parseInt(newMaxStr);
+    var newAvgStr = document.getElementById('newAvg').value;
+    var newAvg = parseInt(newAvgStr);
 
-
-
+// check if the new location is already in the array.
+//If it exists already, console log this fact. Then create newArray and put the original values there.
+//then change hte values to the new values in teh newArray.
     var found = false;
     for(var i = 0; i < locationArray.length; i++){
       // console.log("for loop " + i);
 
       if(newLocation.toUpperCase() === locationArray[i].storeLocation.toUpperCase()){
         var found = true;
+        var index = i;
+        console.log(index);
+        // var newArray =[locationArray[i].storeLocation, locationArray[i].minCustPerHr, locationArray[i].maxCustPerHr, locationArray[i].avgDonutsPerCust];
+        // console.log(newArray);
         break;
       }
     }
@@ -136,13 +144,23 @@ var newStore = function(){
     }
     if (found === true){
       console.log("ok now i need to delete that row and then make an new revised one!")
+      console.log(locationArray[index]);
+      locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
+      console.log(locationArray[index]);
+      // console.log("before: " + newArray);
+      // newArray[0] = newLocation;
+      // newArray[1] = newMin;
+      // newArray[2] = newMax;
+      // newArray[3] = newAvg;
+      // console.log("after: " + newArray);
+      }
+
       // var elementToRemove = document.getElementByClass(newLocation)
       // var parentElement = elementToRemove.parentNode;
       // parentElement.removeChild(elementToRemove);
-      locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
-      locationArray[locationArray.length - 1].makeTable();
+      //
 
-    }
+    // }
 
     // else { continue;
       // console.log("found it on iteration " + i);
