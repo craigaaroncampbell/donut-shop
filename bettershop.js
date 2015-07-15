@@ -48,7 +48,6 @@ Shop.prototype.calculateDailyDonuts = function(){
     return this.dailyDonuts;
 };
 
-
 //method : do all the following:
     //create new element for table - tr
     // create new element for table - td
@@ -108,11 +107,6 @@ for (var i = 0; i < locationArray.length; i++){
   locationArray[i].makeTable();
 }
 
-
-
-// if the store name matches an existing name, delete the old data and repalce
-//it with the new data.
-//otherwise, just add the new data
 var newStore = function(){
     var newLocation = document.getElementById('newLocation').value;
     var newMinStr = document.getElementById('newMin').value;
@@ -123,8 +117,8 @@ var newStore = function(){
     var newAvg = parseInt(newAvgStr);
 
 // check if the new location is already in the array.
-//If it exists already, console log this fact. Then create newArray and put the original values there.
-//then change hte values to the new values in teh newArray.
+//If it exists already, console log this fact. Then delete the original table row
+//then add a new row with the updated info
     var found = false;
     for(var i = 0; i < locationArray.length; i++){
       // console.log("for loop " + i);
@@ -133,50 +127,22 @@ var newStore = function(){
         var found = true;
         var index = i;
         console.log(index);
-        // var newArray =[locationArray[i].storeLocation, locationArray[i].minCustPerHr, locationArray[i].maxCustPerHr, locationArray[i].avgDonutsPerCust];
-        // console.log(newArray);
         break;
       }
     }
-    // console.log(found);
+
     if (found === false){
       locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
       locationArray[locationArray.length - 1].makeTable();
     }
     if (found === true){
       console.log("ok now i need to delete that row and then make an new revised one!")
-      // console.log("before: " + locationArray);
       var foundRow = document.getElementById(locationArray[index].storeLocation);
       var foundRowParent = foundRow.parentNode;
       foundRowParent.removeChild(foundRow);
       locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
-      // console.log(locationArray[index]);
-      // console.log("after: " + locationArray);
       locationArray[index].makeTable();
-
       }
-
-      // var elementToRemove = document.getElementByClass(newLocation)
-      // var parentElement = elementToRemove.parentNode;
-      // parentElement.removeChild(elementToRemove);
-      //
-
-    // }
-
-    // else { continue;
-      // console.log("found it on iteration " + i);
-      // var found = true;
-      // if (found === true){
-      // // locationArray.push(new Shop(newLocation, newMin, newMax, newAvg));
-      // console.log ("found is true");
-      // break;
-    // }
-    // console.log(locationArray);
-    // locationArray[locationArray.length - 1].makeTable();
-    // return;
-
-
-
 };
 
 var newEl = document.getElementById('addStore');
