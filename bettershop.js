@@ -1,14 +1,3 @@
-
-//create object constructor for donut shop
-    //properties of stores:
-      //hours open - all open same so not in paramters
-
-      //parameters
-      //min cust per hour
-      //max cust per hour
-      //avg donuts per cust
-      //location name
-
 var Shop = function (storeLocation, minCustPerHr, maxCustPerHr, avgDonutsPerCust) {
 this.hours = 11;
 this.storeLocation = storeLocation;
@@ -25,9 +14,6 @@ Shop.prototype.calculateHourlyCustomers = function(){
   return hourlyCustomers;
 };
 
-//method: calculate donuts per hour
-//multiply hourly customers by avg donuts per customer. round it so that it is a whole number
-//push each hour's donuts into an array so it keeps track of the donuts each hour - recalculate 11 times using a loop
 Shop.prototype.calculateHourlyDonuts = function(){
   for (var i = 0; i < this.hours; i++){
     var hourlyCustomers = this.calculateHourlyCustomers();
@@ -35,19 +21,7 @@ Shop.prototype.calculateHourlyDonuts = function(){
     this.hourlyDonuts.push(donutsThisHour);
     this.dailyDonuts += donutsThisHour;
   }
-
 };
-
-//method : calculate donuts per day - needs number per hour for each hour
-  //so.... first calculate donuts per hour ... do this 11 times.. then add up the results to get total
-
-//method : do all the following:
-    //create new element for table - tr
-    // create new element for table - td
-    //add store location to table (append child td to tr)
-    //add donuts per hour to table (append td to tr) - DO THIS 11 TIMES
-    // add donuts per day to table (append td to tr)
-
 
 Shop.prototype.makeTable = function(){
   //create table row, table header, and td elements to put data in
@@ -81,8 +55,6 @@ Shop.prototype.makeTable = function(){
   tbl.appendChild(tr);
 };
 
-
-
 var locationArray = [];
 //create instances of each donut shop
 locationArray.push(new Shop("Downtown", 8, 43, 4.5));
@@ -95,12 +67,13 @@ locationArray.push(new Shop("Wedgewood", 2, 28, 1,25));
 
 locationArray.push(new Shop("Ballard", 8, 58, 3.75));
 
-//call method that adds data to table for each store location
+//call method that adds data to table for each store location the first time
 for (var i = 0; i < locationArray.length; i++){
   locationArray[i].calculateHourlyDonuts();
   locationArray[i].makeTable();
 }
 
+// function takes user input and will either create a new table row or update a preexisting one
 var newStore = function(){
     var newLocation = document.getElementById('newLocation').value;
     var newMinStr = document.getElementById('newMin').value;
@@ -129,11 +102,11 @@ var newStore = function(){
       locationArray[locationArray.length - 1].calculateHourlyDonuts();
       locationArray[locationArray.length - 1].makeTable();
     }
+
     if (found === true){
 
       var foundRow = document.getElementById(locationArray[index].storeLocation);
       var childrenToReplace = foundRow.childNodes;
-
 
       locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
       locationArray[index].calculateHourlyDonuts();
@@ -141,16 +114,8 @@ var newStore = function(){
       for (var i = 1; i < childrenToReplace.length; i++){
       childrenToReplace[i].textContent = locationArray[index].hourlyDonuts[i-1];
 
-      // locationArray[index].calculateHourlyDonuts();
-      // console.log(childrenToReplace[i])
-       // = locationArray[index].calculateHourlyDonuts();
      }
      childrenToReplace[childrenToReplace.length - 1].textContent = locationArray[index].dailyDonuts;
-      // var foundRowParent = foundRow.parentNode;
-      // foundRowParent.removeChild(foundRow);
-      // locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
-
-      // locationArray[index].makeTable();
     }
 };
 
