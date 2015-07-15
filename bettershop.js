@@ -138,6 +138,7 @@ var newStore = function(){
       var foundRow = document.getElementById(locationArray[index].storeLocation);
       var foundRowParent = foundRow.parentNode;
       foundRowParent.removeChild(foundRow);
+
       locationArray[index] = new Shop(newLocation, newMin, newMax, newAvg);
       locationArray[index].makeTable();
       }

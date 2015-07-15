@@ -9,14 +9,20 @@
   <body>
     <h1> Craig's Super Awesome Doughnut Calculating Model</h1>
 
-    <div>
+    <div id = "div1">
       <p>This page is a model for the number of doughnuts that various Top Pot Doughnut Caf&#233s need to make every hour. It assumes all stores are open from 7:00 AM to 6:00 PM. </p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKbYeKyOjwqGOaxbDayY0F7rH77iCdJW-QFP2syY-dZUkmZZr" alt = "Top Pot Logo">
-      <p> Hey, I'm not really sure about copyright issues, so I hope it's ok that I use their logo here! Plus this makes for some great text filler!</p>
+      <img  id ="toppot" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKbYeKyOjwqGOaxbDayY0F7rH77iCdJW-QFP2syY-dZUkmZZr" alt = "Top Pot Logo">
+      <section id = "sect1">
+        <p> Hey, I'm not really sure about copyright issues, so I hope it's ok that I use their logo here! Plus this makes for some great text filler!</p>
+
+        <p><i>Did you notice that the Wedgewood location doesn't seem to need to make very many doughnuts?  I'm thinking that from  a business perspective that this loation needs to be closed.... maybe even Capitol Hill. I dunno, I'm a chemist/physicist/teacher/web developer by training, so what do I know about economics? Of course the other possibility is that there is a flaw with the model. That seems pretty likely. Ok I think I'm done with this webpage for now!</i></p>
+      </section>
+    </div>
+  <div id = "div2">
+
     <form>
       <fieldset>
-
-        <legend>Add A New Store!</legend>
+        <legend>Add/Edit a Store!</legend>
 
         <label> Store Location:</br>
           <input id = "newLocation" type = "text"></br>
@@ -34,11 +40,9 @@
           <input id = "newAvg" type = "text"></br>
         </label>
         </br>
-      <input id = "addStore" type = "button" value ="Add Store">
+      <input id = "addStore" type = "button" value ="Add/Edit Store">
       </fieldset>
     </form>
-    <p><i>Did you notice that the Wedgewood location doesn't seem to need to make very many doughnuts?  I'm thinking that from  a business perspective that this loation needs to be closed.... maybe even Capitol Hill. I dunno, I'm a chemist/physicist/teacher/web developer by training, so what do I know about economics? Of course the other possibility is that there is a flaw with the model. That seems pretty likely. Ok I think I'm done with this webpage for now!</i></p>
-    </div>
 
     <table>
       <thead>
@@ -61,6 +65,7 @@
       <tbody id = "table">
       </tbody>
     </table>
+  </div>
 
     <footer> Copyright &copy 2015 Craig Campbell
     </footer>
