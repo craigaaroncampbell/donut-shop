@@ -1,8 +1,15 @@
 # donut-shop
 Donut shop assignment for week 2 of CF Bootcamp
 
-7/13/15
+I used 'Quicksand', sans-serif font from Google for the header
 
-Made basic skeleton of web page.  Javascript file calculates doughnuts needed on an hourly basis at each location and sums up a daily total per location.
 
-This data is displayed in a table that is created primarily through DOM manipulation (text.Content property to display in elements that have been created using the  docuemnt object methods: getElementById() , createElement() , and appendChild().
+I used 'Vidaloka', serif font for hte text below the header.
+
+Color Scheme from Adobe Color CC (Birdfolio Blues scheme):
+  #223242 - blue-black (main text)
+  #3F5765 - blue-grey (table border)
+  #BDD4DE - light blue (background)
+  #EFEFEF - white  (footer border)
+  #FF530D - orange  (footer)
+
