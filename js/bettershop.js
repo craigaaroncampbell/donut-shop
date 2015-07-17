@@ -94,23 +94,15 @@ var newStore = function(){
     newLocation = "AAAAAAAHHHHHH!";
   }
 
-  if (locationArray.length === 8){
-  alert("That's 8 stores... I think you don't need any more!")
-};
 
-if (locationArray.length === 9){
-  alert("That's 9 stores... STOP MAKING MORE STORES!")
-};
-
-if (locationArray.length === 10){
-  var celebrate = confirm("That's 10 stores... You have worked hard to open so many stores so quickly. Let's Celebrate!");
-
-  if (!celebrate){
-    alert("You're no fun!");
-  }else {
-    alert("Well I'm too lazy to do anything else to this code, so you're stuck with this lame alert!");
+  if (newLocation.toUpperCase() === "Sam's House".toUpperCase()) {
+  var getHead = document.getElementById('head');
+  console.log(getHead);
+  var newFont = document.createElement('style');
+  newFont.textContent = "body { font-family: \"Comic Sans MS\"; }";
+  console.log(newFont);
+  getHead.appendChild(newFont);
   }
-}
 
 
 // check if the new location is already in the array.
@@ -147,6 +139,24 @@ if (locationArray.length === 10){
      }
      childrenToReplace[childrenToReplace.length - 1].textContent = locationArray[index].dailyDonuts;
     }
+
+    if (locationArray.length === 8){
+  alert("That's 8 stores... I think you don't need any more!")
+};
+
+if (locationArray.length === 9){
+  alert("That's 9 stores... STOP MAKING MORE STORES!")
+};
+
+if (locationArray.length === 10){
+  var celebrate = confirm("That's 10 stores... You have worked hard to open so many stores so quickly. Let's Celebrate!");
+
+  if (!celebrate){
+    alert("You're no fun!");
+  }else {
+    alert("Well I'm too lazy to do anything else to this code, so you're stuck with this lame alert!");
+  }
+}
 };
 
 var newEl = document.getElementById('addStore');
