@@ -75,13 +75,43 @@ for (var i = 0; i < locationArray.length; i++){
 
 // function takes user input and will either create a new table row or update a preexisting one
 var newStore = function(){
-    var newLocation = document.getElementById('newLocation').value;
-    var newMinStr = document.getElementById('newMin').value;
-    var newMin = parseInt(newMinStr);
-    var newMaxStr = document.getElementById('newMax').value;
-    var newMax = parseInt(newMaxStr);
-    var newAvgStr = document.getElementById('newAvg').value;
-    var newAvg = parseInt(newAvgStr);
+ var newLocation = document.getElementById('newLocation').value;
+  var newMinStr = document.getElementById('newMin').value;
+  var newMin = parseInt(newMinStr);
+  var newMaxStr = document.getElementById('newMax').value;
+  var newMax = parseInt(newMaxStr);
+  var newAvgStr = document.getElementById('newAvg').value;
+  var newAvg = parseInt(newAvgStr);
+
+  if (newLocation.toUpperCase() === "Run's House".toUpperCase()) {
+    var pic = document.getElementById("toppot");
+    pic.setAttribute("src", "http://s3.amazonaws.com/rapgenius/revrunfortwitter2.jpg")
+  }
+
+  if (newLocation.toUpperCase() === "I want to see a scary headless guy".toUpperCase()) {
+    var pic = document.getElementById("toppot");
+    pic.setAttribute("src", "brook.png")
+    newLocation = "AAAAAAAHHHHHH!";
+  }
+
+  if (locationArray.length === 8){
+  alert("That's 8 stores... I think you don't need any more!")
+};
+
+if (locationArray.length === 9){
+  alert("That's 9 stores... STOP MAKING MORE STORES!")
+};
+
+if (locationArray.length === 10){
+  var celebrate = confirm("That's 10 stores... You have worked hard to open so many stores so quickly. Let's Celebrate!");
+
+  if (!celebrate){
+    alert("You're no fun!");
+  }else {
+    alert("Well I'm too lazy to do anything else to this code, so you're stuck with this lame alert!");
+  }
+}
+
 
 // check if the new location is already in the array.
 //If it exists already, console log this fact. Then delete the original table row
@@ -121,4 +151,5 @@ var newStore = function(){
 
 var newEl = document.getElementById('addStore');
 newEl.addEventListener("click", newStore, false);
+
 

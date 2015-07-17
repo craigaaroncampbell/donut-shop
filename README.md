@@ -11,5 +11,12 @@ Color Scheme from Adobe Color CC (Birdfolio Blues scheme):
   #3F5765 - blue-grey (table border)
   #BDD4DE - light blue (background)
   #EFEFEF - white  (footer border)
-  #FF530D - orange  (footer)
+  #FF530D - orange  (headers)
 
+
+
+Relative position: text to the right of the picture (id = "around picture")
+
+Fixed position: header (Craig's Super Cool Donut Calculating Model)
+
+absolute position: footer  (copyright)

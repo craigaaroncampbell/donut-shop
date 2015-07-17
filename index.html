@@ -10,28 +10,52 @@
 
     <header>
       <h1> Craig's Super Awesome Doughnut Calculating Model</h1>
-      <nav> <a href="http://http://www.toppotdoughnuts.com/"> Top Pot Website</a>
+      <nav> <a href="http:www.toppotdoughnuts.com/"> Top Pot Website</a>
       </nav>
     </header>
 
-    <div id = "div1">
-      <h3>About This Site</h3>
-      <p>This page is a model for the number of doughnuts that various Top Pot Doughnut Caf&#233s need to make every hour. It assumes all stores are open from 7:00 AM to 6:00 PM. </p>
+      <h2>About This Site</h2>
+      <p> Not many people know this, but "I want to see a scary headless guy" is actually neighborhood in Seattle. True story.
+      </p>
+      <p>This page is a model for the number of doughnuts that various Top Pot Doughnut Caf&#233s need to make every hour. It assumes all stores are open from 7:00 AM to 6:00 PM. Use the Add/Edit Store input to add a store of your own! You specify the location, minimum number of customers  in an hour, maximum number of customers, and the average amount of donuts that each customer buys.
+      </p>
+      </p>
+     The "super duper magic calculator" (aka JavaScript program that I wrote) will calculate a random number of customers in between your min and max values. It then multiplies that random number by the average amount of doughnuts that each customer will buy! <em> Preety Schnazzy!</em> The "super duper magic calculator" repeats this calculation for every hour that the doughnut shops are open. Yes, that's 11 whole hours!  And since the number of customers is random each hour, you get different numbers. Oh yeah. An then the calculator adds these all up and tells you approximately how many doughnuts to make for EACH shop! Wow!
+      </p>
+
+      <h3> But wait... There's more!
+      </h3>
+
+      <p>Did I mention that it then CREATES A TABLE OUT OF THIN AIR? Yes it does!  Thanks to the magic of DOM manipulation, a data table is created right before your very eyes! You don't notice this  because the data table is there when load this page, but it was created <em>in situ</em>! Ok the hours  data cells are "permanently" part of the page, but then what does "permanent" mean anyway?  But try it for yourself!  When you make new location, the data table just appears out of thin air!
+      </p>
+
+      <h3>What? That's not good enough for you? You demand more?
+      </h3>
+
+      <p><b>Ok, you got it!</b> You can even update the data that I so painstakingly provided to you! Yes, if you type in a preexisting store name (or even the same one that you already added yourself) then you can update the data table!
+      </p>
+
       <img  id ="toppot" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKbYeKyOjwqGOaxbDayY0F7rH77iCdJW-QFP2syY-dZUkmZZr" alt = "Top Pot Logo">
-      <article id = "sect1">
+      <div id="around_picture">
         <p> Hey, I'm not really sure about copyright issues, so I hope it's ok that I use their logo here! Plus this makes for some great text filler!</p>
 
         <p><i>Did you notice that the Wedgewood location doesn't seem to need to make very many doughnuts?  I'm thinking that from  a business perspective that this loation needs to be closed.... maybe even Capitol Hill. I dunno, I'm a chemist/physicist/teacher/web developer by training, so what do I know about economics? Of course the other possibility is that there is a flaw with the model. That seems pretty likely. Ok I think I'm done with this webpage for now!</i></p>
-      </article>
+        <h3>Easter Egg Time!</h3>
+        <p> Ok Y'all remember the 80's, right?  So I want a new donut shop at somone's house.  But the question is... WHO'S HOUSE? Maybe this audio file will jog your memory....</p>
+
+        <audio src = "runs_house.mp3" controls preload></audio>
+        <p> Again, I don't know about copyright issues, royalties, etc...., but um... yeah. Hey look over there.. yeah just keep looking while I  um... go... um... [sounds of running footsteps].
+        </p>
+
     </div>
-    <section id = "div2">
+    <div id = "estimations">
 
       <form>
         <fieldset>
           <legend>Add/Edit a Store!</legend>
 
           <label> Store Location:</br>
-            <input id = "newLocation" type = "text" placeholder="Enter a Location"></br>
+            <input id = "newLocation" type = "text" placeholder="Enter a Location" ></br>
           </label> </br>
 
           <label> Minimum Customers per Hour:</br>
@@ -73,10 +97,48 @@
           <tbody id = "table">
         </tbody>
       </table>
-    </section>
+    </div>
+    <article id = "bacon">
+      <h3> Some Meaty/Bacony Random Gibberish </h3>
+      <p>
+        Bacon ipsum dolor amet kielbasa commodo enim id consequat. Turducken deserunt culpa jerky chuck dolore shankle bacon est leberkas quis shank in fugiat fatback. Ex eiusmod andouille, sirloin id beef duis. Elit ullamco non tempor sunt irure. Reprehenderit meatloaf porchetta et flank sausage excepteur drumstick velit.
+      </p>
+
+    <p>
+      Flank incididunt dolore magna turkey venison ut chicken brisket est pastrami. Turkey consectetur ham lorem. Culpa kielbasa cow, voluptate frankfurter consectetur in quis ea spare ribs. Esse officia hamburger ut ut, ipsum beef velit prosciutto chicken.
+    </p>
+    <p>
+      Brisket velit ut excepteur mollit hamburger chuck leberkas non ad strip steak. Laborum ex ut turducken pork belly, dolore jerky aute est velit do consequat chuck. Jowl non swine in. Ea reprehenderit shank pariatur in. Ham ullamco picanha excepteur mollit jowl swine chicken pork loin. Pig commodo kielbasa non fugiat chicken shank beef ribs nisi meatloaf. Consequat fatback consectetur, laboris alcatra flank ullamco sunt ham spare ribs rump shankle beef commodo.
+    </p>
+    <p>
+      Culpa alcatra pork ea incididunt t-bone chicken. Ham hock beef shank sunt andouille, pork chop ground round irure excepteur strip steak pariatur pork belly pastrami. Rump consectetur salami, aliqua cow alcatra et meatloaf. Pork belly pork minim in in, non aute laborum adipisicing quis officia labore. Non cupidatat occaecat, in veniam cillum jowl. Filet mignon tail quis, in pork loin sunt aute id ut minim bacon chuck.
+    </p>
+
+    <p>
+      Irure pork chop voluptate rump, velit eiusmod ribeye ex duis et labore ipsum enim. Meatloaf laborum bacon mollit porchetta filet mignon, cow prosciutto ground round ham hock. Quis meatball magna tail, jowl ut biltong adipisicing ex sed beef proident aliquip. Cupidatat alcatra ham hock esse chuck.
+    </p>
+    </article>
+
+    <article id = "cupcake">
+      <h3>Some Cupcake Ipsum</h3>
+      <p>Cupcake ipsum dolor sit amet chupa chups carrot cake lollipop marzipan. Wafer oat cake donut. Fruitcake cake wafer tart jujubes chocolate chupa chups. Marzipan muffin donut cookie muffin cupcake. Topping sweet roll pastry halvah macaroon. Sesame snaps jelly-o muffin apple pie. Gummies cupcake chocolate tiramisu.
+      </p>
+      <p>
+        Caramels icing candy canes. Tiramisu tart apple pie. Toffee oat cake tiramisu dragée cake cheesecake icing tart. Pie jelly caramels jelly beans. Chocolate bar pastry oat cake sesame snaps jelly beans pie. Macaroon croissant macaroon chocolate bar. Jujubes croissant marshmallow. Cookie chocolate cake cake tart pie cupcake jujubes. Donut lollipop candy canes.
+      </p>
+      <p>
+        Sweet chocolate jelly-o tart sugar plum marshmallow dragée gingerbread cake. Sweet roll bear claw toffee. Powder marshmallow dragée gummi bears tart. Dragée pudding dessert jelly dessert. Marzipan macaroon pastry lollipop. Sweet roll candy lemon drops tart icing lollipop pie. Oat cake donut jelly-o icing croissant marshmallow marzipan bonbon liquorice. Carrot cake caramels cake. Jelly macaroon cake macaroon sesame snaps chocolate bar halvah apple pie. Wafer brownie toffee cookie jujubes.
+      </p>
+      <p>
+      Halvah sweet roll cotton candy. Sugar plum bear claw marshmallow oat cake danish cookie. Liquorice cupcake tiramisu pie cookie marshmallow bonbon sugar plum tootsie roll. Lollipop chocolate bar cake candy tootsie roll carrot cake muffin sweet macaroon. Danish cotton candy gummi bears. Gummi bears gummi bears apple pie chocolate bar oat cake danish. Pudding soufflé jelly jelly beans dessert danish.
+      Wafer toffee sweet. Danish muffin marzipan cupcake candy sugar plum candy canes jelly bonbon. Topping cake marzipan. Brownie pastry macaroon. Candy ice cream chocolate donut cotton candy cheesecake jelly beans brownie dragée. Croissant pie cupcake brownie croissant chocolate bar. Bear claw gummi bears dessert jelly biscuit cake.
+      Halvah croissant cupcake gummies. Biscuit cupcake halvah gingerbread wafer cake wafer. Halvah candy tart chocolate cake macaroon toffee. Lollipop sugar plum brownie soufflé gummi bears chocolate cake. Apple pie chupa chups sweet muffin halvah chocolate cake tart. Danish wafer dragée croissant halvah toffee. Pudding tart oat cake ice cream. Sugar plum muffin tiramisu cotton candy croissant biscuit. Jelly chocolate chocolate carrot cake dessert.
+      </p>
+    </article>
 
     <footer> Copyright &copy 2015 Craig Campbell
     </footer>
+
 
     <script src = "js/bettershop.js">
     </script>

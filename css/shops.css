@@ -1,11 +1,24 @@
+
 body{
   background-color: #BDD4DE;
+  width: 95%;
+  margin: 5 auto;
+  margin-top: 150px;
+  font-family: 'Vidaloka', serif;
+
 }
 
 fieldset {
   width: 300px;
   float: left;
   border: 3px solid #efefef;
+  margin: auto;
+  margin-right: 10px;
+
+}
+
+audio {
+  margin: auto;
 }
 
 fieldset legend {
@@ -37,39 +50,38 @@ float: right;
 
 table {
   border: 3px solid #efefef;
+  margin: auto;
 }
 
 table caption {
   color: #FF530D;
 }
 
-#div2{
+#estimations{
   overflow: auto;
+  border: 2px solid #3f5765;
+  padding: 10px;
+  margin-left: 250px;
+  width: 75%;
 }
 
 #toppot{
-  height: 15%;
-  width: 10%;
-  float: left;
-  margin-left: 25px;
-  margin-right: 25px;
+  height: 200px;
+  width: 200x;
+float: left;
 }
 
-#sect1 {
-  margin-left: 150px;
-  margin-right: 25px;
-
+#around_picture{
+  position: relative;
+  left: 2%;
+  width: 80%;
 }
 
-h1 {
+h1, h2, h3{
 font-family: 'Quicksand', sans-serif;
 }
 
-#div1 {
-  font-family: 'Vidaloka', serif;
-}
-
-h3{
+h2, h3{
   color:#FF530D;
 }
 
@@ -79,8 +91,13 @@ footer {
   border-radius: 50%;
   border: 1px solid #efefef;
   width: 25em;
-  margin: auto;
+
   padding: 5px;
+  position: relative;
+ left: 35%;
+  margin-bottom: 100px;
+  margin-top: 25px;
+  color: #FF530D;
 }
 
 nav a {
@@ -92,6 +109,12 @@ header {
   border: 2px solid #efefef;
   text-align: center;
   color: #223242;
+  position: fixed;
+  margin-top: 0;
+  background-color: BDD4DE;
+  margin-bottom: 100px ;
+  margin-top: -140px;
+  width: 100%;
 }
 
 p {
