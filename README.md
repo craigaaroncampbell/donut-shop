@@ -20,3 +20,6 @@ Relative position: text to the right of the picture (id = "around picture")
 Fixed position: header (Craig's Super Cool Donut Calculating Model)
 
 absolute position: footer  (copyright)
+
+
+And there are some Easter eggs too. hooray!
