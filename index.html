@@ -7,54 +7,35 @@
     <link href='http://fonts.googleapis.com/css?family=Quicksand|Vidaloka' rel='stylesheet' type='text/css'>
 
   </head>
-  <body>
 
-    <header>
-      <h1> Craig's Super Awesome Doughnut Calculating Model</h1>
-      <nav> <a href="http:www.toppotdoughnuts.com/"> Top Pot Website</a>
-      </nav>
+  <body>
+    <header id = "header">
+     Craig's Super Awesome Doughnut Calculating Model
     </header>
 
+    <sidebar id ="right">
+      <img id = "jaws" src = "img/jaws.png">
+      <img id = "donut" src = "img/donut.png">
+      <img id = "donut_bite" src = "img/bite.png">
+
+    </sidebar>
+
+    <section id = "maintext">
       <h2>About This Site</h2>
-      <p> Not many people know this, but "I want to see a scary headless guy" is actually neighborhood in Seattle. True story.
-      </p>
-      <p>This page is a model for the number of doughnuts that various Top Pot Doughnut Caf&#233s need to make every hour. It assumes all stores are open from 7:00 AM to 6:00 PM. Use the Add/Edit Store input to add a store of your own! You specify the location, minimum number of customers  in an hour, maximum number of customers, and the average amount of donuts that each customer buys.
+      <p>Not many people know this, but "I want to see a scary headless guy" is actually neighborhood in Seattle. True story.This page is a model for the number of doughnuts that various Top Pot Doughnut Caf&#233s need to make every hour. It assumes all stores are open from 7:00 AM to 6:00 PM. Use the Add/Edit Store input to add a store of your own! You specify the location, minimum number of customers  in an hour, maximum number of customers, and the average amount of donuts that each customer buys.
       </p>
       </p>
      The "super duper magic calculator" (aka JavaScript program that I wrote) will calculate a random number of customers in between your min and max values. It then multiplies that random number by the average amount of doughnuts that each customer will buy! <em> Preety Schnazzy!</em> The "super duper magic calculator" repeats this calculation for every hour that the doughnut shops are open. Yes, that's 11 whole hours!  And since the number of customers is random each hour, you get different numbers. Oh yeah. An then the calculator adds these all up and tells you approximately how many doughnuts to make for EACH shop! Wow!
       </p>
+         <img  id ="toppot" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKbYeKyOjwqGOaxbDayY0F7rH77iCdJW-QFP2syY-dZUkmZZr" alt = "Top Pot Logo">
 
-      <h3> But wait... There's more!
-      </h3>
+      <h3> But wait... There's more!</h3>
 
       <p>Did I mention that it then CREATES A TABLE OUT OF THIN AIR? Yes it does!  Thanks to the magic of DOM manipulation, a data table is created right before your very eyes! You don't notice this  because the data table is there when load this page, but it was created <em>in situ</em>! Ok the hours  data cells are "permanently" part of the page, but then what does "permanent" mean anyway?  But try it for yourself!  When you make new location, the data table just appears out of thin air!
       </p>
 
-      <h3>What? That's not good enough for you? You demand more?
-      </h3>
-
-      <p><b>Ok, you got it!</b> You can even update the data that I so painstakingly provided to you! Yes, if you type in a preexisting store name (or even the same one that you already added yourself) then you can update the data table!
-      </p>
-
-      <img  id ="toppot" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKbYeKyOjwqGOaxbDayY0F7rH77iCdJW-QFP2syY-dZUkmZZr" alt = "Top Pot Logo">
-      <img id = "donut" src = "donut.png">
-      <img id = "donut_bite" src = "bite.png">
-      <img id = "jaws" src = "jaws.png">
-      <div id="around_picture">
-        <p> Hey, I'm not really sure about copyright issues, so I hope it's ok that I use their logo here! Plus this makes for some great text filler!</p>
-
-        <p><i>Did you notice that the Wedgewood location doesn't seem to need to make very many doughnuts?  I'm thinking that from  a business perspective that this loation needs to be closed.... maybe even Capitol Hill. I dunno, I'm a chemist/physicist/teacher/web developer by training, so what do I know about economics? Of course the other possibility is that there is a flaw with the model. That seems pretty likely. Ok I think I'm done with this webpage for now!</i></p>
-        <h3>Easter Egg Time!</h3>
-        <p> Ok Y'all remember the 80's, right?  So I want a new donut shop at somone's house.  But the question is... WHO'S HOUSE? Maybe this audio file will jog your memory....</p>
-
-        <audio src = "jibbityflibbity.mp3" controls preload></audio>
-        <p> Again, I don't know about copyright issues, royalties, etc...., but um... yeah. Hey look over there.. yeah just keep looking while I  um... go... um... [sounds of running footsteps].
-        </p>
-
-    </div>
-    <div id = "estimations">
-
-      <form>
+    </section>
+        <div id="data">
         <fieldset>
           <legend>Add/Edit a Store!</legend>
 
@@ -77,7 +58,7 @@
           </br>
           <input id = "addStore" type = "button" value ="Add/Edit Store">
        </fieldset>
-      </form>
+
 
       <table>
         <thead>

@@ -90,7 +90,7 @@ var newStore = function(){
 
   if (newLocation.toUpperCase() === "I want to see a scary headless guy".toUpperCase()) {
     var pic = document.getElementById("toppot");
-    pic.setAttribute("src", "brook.png")
+    pic.setAttribute("src", "img/brook.png")
     newLocation = "AAAAAAAHHHHHH!";
   }
 

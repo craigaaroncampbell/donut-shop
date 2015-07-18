@@ -1,3 +1,6 @@
+TO GET THE SHARK-DONUT ANIMATION TO REPEAT, JUST RELOAD THE PAGE!
+
+
 # donut-shop
 Donut shop assignment for week 2 of CF Bootcamp
 
@@ -28,3 +31,7 @@ Image credits:
 Jaws: http://ih1.redbubble.net/image.15761663.6878/fc,550x550,white.jpg
 Donut: http://www.bargainblessings.com/free-donuts-from-king-soopers-when-the-broncos-win-0-88-2-liter-sodas-on-game-day/
 Donut with bite:http://www.fanpop.com/clubs/donuts/images/36702239/title/donut-photo
+
+Animation adapted from:
+http://css3.bradshawenterprises.com/cfimg/
+
