@@ -1,7 +1,6 @@
 TO GET THE SHARK-DONUT ANIMATION TO REPEAT, JUST RELOAD THE PAGE!
 
 
-# donut-shop
 Donut shop assignment for week 2 of CF Bootcamp
 
 I used 'Quicksand', sans-serif font from Google for the header
@@ -35,3 +34,5 @@ Donut with bite:http://www.fanpop.com/clubs/donuts/images/36702239/title/donut-p
 Animation adapted from:
 http://css3.bradshawenterprises.com/cfimg/
 
+
+Thanks to Sam Hamm for helping fix the donut-bite image!
